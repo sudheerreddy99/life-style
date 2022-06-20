@@ -1,0 +1,197 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="lifestyle.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 129px;
+        }
+        .auto-style2 {
+            width: 1485px;
+            height: 161px;
+        }
+        .auto-style13 {
+            width: 99%;
+        }
+        .auto-style21 {
+            height: 50px;
+            width: 107px;
+        }
+        .auto-style22 {
+            height: 27px;
+            width: 107px;
+        }
+        .auto-style23 {
+            width: 107px;
+        }
+        .auto-style58 {
+            margin-left: 0px;
+        }
+        .auto-style63 {
+            height: 28px;
+            width: 107px;
+        }
+        .auto-style71 {
+            height: 50px;
+            width: 68px;
+        }
+        .auto-style72 {
+            height: 27px;
+            width: 68px;
+        }
+        .auto-style73 {
+            height: 28px;
+            width: 68px;
+        }
+        .auto-style79 {
+            width: 105px;
+        }
+        .auto-style81 {
+            height: 50px;
+            width: 165px;
+        }
+        .auto-style82 {
+            height: 27px;
+            width: 165px;
+        }
+        .auto-style83 {
+            height: 28px;
+            width: 165px;
+        }
+        .auto-style84 {
+            width: 165px;
+        }
+        .auto-style85 {
+            height: 50px;
+            width: 126px;
+        }
+        .auto-style86 {
+            height: 27px;
+            width: 126px;
+        }
+        .auto-style87 {
+            height: 28px;
+            width: 126px;
+        }
+        .auto-style88 {
+            width: 126px;
+        }
+        .auto-style89 {
+            height: 50px;
+            width: 111px;
+        }
+        .auto-style90 {
+            height: 27px;
+            width: 111px;
+        }
+        .auto-style91 {
+            height: 28px;
+            width: 111px;
+        }
+        .auto-style92 {
+            width: 111px;
+        }
+        .auto-style93 {
+            width: 1495px;
+        }
+        .auto-style94 {
+            width: 68px;
+        }
+    </style>
+</head>
+<body style="height: 406px; width: 1493px">
+    <form id="form1" runat="server" class="auto-style93">
+        <h1>Welcome to master page</h1>
+        <p>
+            <table class="auto-style13">
+                <tr>
+                    <td class="auto-style1" colspan="6">
+                        <img alt="" class="auto-style2" src="images/banner1.jpg" /></td>
+                </tr>
+                <tr>
+                    <td class="auto-style79" rowspan="4" style="background-color: #666666">
+                        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ForeColor="White">
+                        </asp:TreeView>
+                    </td>
+                    <td class="auto-style21">
+                        <asp:Label ID="Label1" runat="server" Text="Welcome"></asp:Label>
+                        <br />
+                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                    </td>
+                    <td class="auto-style71">
+                        &nbsp;<asp:TextBox ID="TextBox1" runat="server" Height="31px" Width="196px"></asp:TextBox>
+                       
+                       
+                    
+                    <td class="auto-style81">
+                        <asp:Button ID="Button1" runat="server" CssClass="auto-style58" OnClick="Button1_Click" Text="Button" />
+                    </td>
+                    <td class="auto-style85">
+                    </td>
+                    <td class="auto-style89">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style22" style="background-color: #C0C0C0">
+                        <asp:HyperLink ID="HyperLink1" runat="server" BackColor="#CCCCCC" ForeColor="#000066" NavigateUrl="~/Home.aspx" BorderColor="#CCFFFF">Home</asp:HyperLink>
+                    </td>
+                    <td class="auto-style72" style="background-color: #C0C0C0">
+                        <% 
+                            if(Session["user"]==null)
+                            { %>
+                          <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="#000066" NavigateUrl="~/login.aspx" BorderColor="White">Login</asp:HyperLink>
+
+                         <%   }
+
+                            else
+            {
+                                 %>
+                           <asp:HyperLink ID="HyperLink6" runat="server" ForeColor="#000066" NavigateUrl="~/logout.aspx">Logout</asp:HyperLink>
+
+
+         <%   }
+                            %>
+                       
+                       
+                    
+                    <td class="auto-style82" style="background-color: #C0C0C0">
+                        <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="#000066" NavigateUrl="~/product.aspx">Products</asp:HyperLink>
+                    </td>
+                    <td class="auto-style86" style="background-color: #C0C0C0">
+                        <asp:HyperLink ID="HyperLink4" runat="server" ForeColor="#000066" NavigateUrl="~/buy.aspx">Buy</asp:HyperLink>
+                    </td>
+                    <td class="auto-style90" style="background-color: #C0C0C0">
+                        <asp:HyperLink ID="HyperLink5" runat="server" ForeColor="Black" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style63">&nbsp;</td>
+                    <td class="auto-style73">&nbsp;</td>
+                    <td class="auto-style83"></td>
+                    <td class="auto-style87"></td>
+                    <td class="auto-style91"></td>
+                </tr>
+                <tr>
+                    <td class="auto-style23">&nbsp;</td>
+                    <td class="auto-style94">&nbsp;</td>
+                    <td class="auto-style84">&nbsp;</td>
+                    <td class="auto-style88">&nbsp;</td>
+                    <td class="auto-style92">&nbsp;</td>
+                </tr>
+            </table>
+        </p>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        
+    </form>
+</body>
+</html>

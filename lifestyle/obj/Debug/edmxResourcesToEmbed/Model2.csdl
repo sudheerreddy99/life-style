@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="lifestyleModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="pid" />
+    </Key>
+    <Property Name="pid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pname" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="pimage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="pdesc" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+  </EntityType>
+  <EntityType Name="register">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pwd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Byte" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nationality" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="userorder">
+    <Key>
+      <PropertyRef Name="transactionid" />
+    </Key>
+    <Property Name="transactionid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="qty" Type="Int32" />
+    <Property Name="totalprice" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="lifestyleEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="products" EntityType="Self.product" />
+    <EntitySet Name="registers" EntityType="Self.register" />
+    <EntitySet Name="userorders" EntityType="Self.userorder" />
+  </EntityContainer>
+</Schema>

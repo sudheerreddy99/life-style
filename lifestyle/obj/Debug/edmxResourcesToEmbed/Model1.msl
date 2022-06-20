@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="lifestyleModelStoreContainer" CdmEntityContainer="lifestyleEntities1">
+    <EntitySetMapping Name="registers">
+      <EntityTypeMapping TypeName="lifestyleModel.register">
+        <MappingFragment StoreEntitySet="register">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="nationality" ColumnName="nationality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="lifestyleModel.product">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="pdesc" ColumnName="pdesc" />
+          <ScalarProperty Name="pimage" ColumnName="pimage" />
+          <ScalarProperty Name="pname" ColumnName="pname" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userorders">
+      <EntityTypeMapping TypeName="lifestyleModel.userorder">
+        <MappingFragment StoreEntitySet="userorders">
+          <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="pid" ColumnName="pid" />
+          <ScalarProperty Name="transactionid" ColumnName="transactionid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
